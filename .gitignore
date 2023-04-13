@@ -1,3 +1,4 @@
 /store/store/settings.py
 /store/db.sqlite3
 /venv/
+/store/.idea/

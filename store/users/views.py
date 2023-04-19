@@ -35,15 +35,6 @@ class UserProfileView(TitleMixin, UpdateView):
     def get_success_url(self):
         return reverse_lazy('users:profile', args=(self.object.id,))
 
-    def get_context_data(self, **kwargs):
-        baskets = Basket.objects.filter(user=self.request.user)
-
-        context = super(UserProfileView, self).get_context_data()
-        context['baskets'] = baskets
-        context['total_sum'] = sum(basket.sum() for basket in baskets)
-        context['total_quantity'] = baskets.aggregate(Sum('quantity')).get('quantity__sum')
-        return context
-
 
 class EmailVerificationView(TitleMixin, TemplateView):
     title = 'Store - Подтверждение электронной почты'

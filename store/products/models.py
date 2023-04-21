@@ -5,7 +5,6 @@ from users.models import User
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=128, unique=True)
-    description = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = 'категорию'
@@ -16,11 +15,10 @@ class ProductCategory(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=256)
-    description = models.TextField()
+    name = models.TextField()
     price = models.DecimalField(max_digits=12, decimal_places=2)
     quantity = models.PositiveIntegerField(default=0)
-    image = models.ImageField(upload_to='products_images')
+    image = models.ImageField(upload_to='media/product_images')
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE)
 
     class Meta:

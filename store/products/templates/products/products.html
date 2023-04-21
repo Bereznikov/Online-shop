@@ -84,7 +84,8 @@
                             <a class="page-link"
                                href="{% if page_obj.has_previous %} ?page={{ page_obj.previous_page_number }} {% else %}#{% endif %}"
                                tabindex="-1" aria-disabled="true">
-                                Предыдущая</a>
+                                Предыдущая
+                            </a>
                         </li>
 
                         {% for page_item in page_obj.paginator.page_range %}

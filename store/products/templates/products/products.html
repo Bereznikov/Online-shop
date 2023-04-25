@@ -18,6 +18,10 @@
                     {% for category in categories %}
                         <a href="{% url 'products:category' category.id %}" class="list-group-item">{{ category.name }}</a>
                     {% endfor %}
+                {% elif 'category' in request.path %}
+                    {% for category in categories %}
+                        <a href="{% url 'products:category' category.id %}" class="list-group-item">{{ category.name }}</a>
+                    {% endfor %}
                 {% else %}
                     {% for section in sections %}
                         <a href="{% url 'products:section' section.id %}" class="list-group-item">{{ section.name }}</a>

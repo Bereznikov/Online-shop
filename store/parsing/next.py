@@ -12,6 +12,7 @@ class Parser:
         self._section_names = ['ДЕВОЧКИ', 'МАЛЬЧИКИ', 'ДЛЯ МАЛЫШЕЙ', 'ЖЕНЩИНЫ', "МУЖЧИНЫ", "ДЛЯ ДОМА"]
         self.categories = []
         self.result = []
+        self.sections = []
         self.id_set = set()
         self.product_id = 1
         self.category_name_set = set()
@@ -116,23 +117,27 @@ class Parser:
                             continue
                         if '-' in price or '&' in good_id:
                             price_low = price.split(' - ')[0].strip(' тг').replace(' ', '')
-                            good_dict = {'pk': self.product_id,
-                                         "model": "products.product",
-                                         'fields': {'name': good_name,
-                                                    'price': price_low,
-                                                    'image': image,
-                                                    "category": f'{counter}{category_pair_id}'
-                                                    }
-                                         }
+                            good_dict = {
+                                'pk': self.product_id,
+                                "model": "products.product",
+                                'fields': {'name': good_name,
+                                           'price': price_low,
+                                           'image': image,
+                                           "category": category_pair_id,
+                                           "section": counter
+                                           }
+                            }
                         else:
-                            good_dict = {'pk': self.product_id,
-                                         "model": "products.product",
-                                         'fields': {'name': good_name,
-                                                    'price': price.strip('тг').replace(' ', ''),
-                                                    'image': image,
-                                                    "category": f'{counter}{category_pair_id}'
-                                                    }
-                                         }
+                            good_dict = {
+                                'pk': self.product_id,
+                                "model": "products.product",
+                                'fields': {'name': good_name,
+                                           'price': price.strip('тг').replace(' ', ''),
+                                           'image': image,
+                                           "category": category_pair_id,
+                                           "section": counter
+                                           }
+                            }
                         if good_dict['pk'] not in self.id_set:
                             self.product_id += 1
                             self.result.append(good_dict)
@@ -153,18 +158,28 @@ class Parser:
                 category_names_links = self.get_url_categories(section_link)
                 for category_pair in category_names_links:
                     category_pair_id += 1
-                    category_name = f'{self._section_names[counter].upper()} - {category_pair[0].strip().upper()}'
+                    category_name = category_pair[0].strip().upper() + self._section_names[counter]
                     if category_name not in self.category_name_set:
                         task = asyncio.create_task(self.get_data(session, category_pair, counter, category_pair_id))
                         tasks.append(task)
-                        category = {"model": "products.productcategory",
-                                    "pk": f'{counter}{category_pair_id}',
-                                    "fields": {
-                                        "name": category_name,
-                                    }
-                                    }
+                        category = {
+                            "model": "products.productcategory",
+                            "pk": category_pair_id,
+                            "fields": {
+                                "name": category_pair[0].strip().upper(),
+                                "section": counter
+                            }
+                        }
                         self.categories.append(category)
                         self.category_name_set.add(category_name)
+                section = {
+                    "model": "products.productsection",
+                    "pk": counter,
+                    "fields": {
+                        "name": self._section_names[counter],
+                    }
+                }
+                self.sections.append(section)
                 counter += 1
             await asyncio.gather(*tasks)
 
@@ -175,18 +190,20 @@ class Parser:
         asyncio.run(self.main())
 
 
-def make_fixtures(result, categories):
+def make_fixtures(result, categories, sections):
     with open('../products/fixtures/products.json', 'w', encoding='utf-8') as file:
         json.dump(result, file, indent=4, ensure_ascii=False)
     with open('../products/fixtures/categories_next.json', 'w', encoding='utf-8') as file:
         json.dump(categories, file, indent=4, ensure_ascii=False)
+    with open('../products/fixtures/sections_next.json', 'w', encoding='utf-8') as file:
+        json.dump(sections, file, indent=4, ensure_ascii=False)
 
 
 def main():
     parse_site = Parser()
     parse_site('https://www.nextdirect.com/kz/ru')
     print('Парсинг выполнен')
-    make_fixtures(parse_site.result, parse_site.categories)
+    make_fixtures(parse_site.result, parse_site.categories, parse_site.sections)
     print('Файлы обновлены')
 
 

@@ -3,8 +3,20 @@ from django.db import models
 from users.models import User
 
 
-class ProductCategory(models.Model):
+class ProductSection(models.Model):
     name = models.CharField(max_length=128, unique=True)
+
+    class Meta:
+        verbose_name = 'секцию'
+        verbose_name_plural = 'Секции продуктов'
+
+    def __str__(self):
+        return self.name
+
+
+class ProductCategory(models.Model):
+    name = models.CharField(max_length=128)
+    section = models.ForeignKey(to=ProductSection, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'категорию'
@@ -20,6 +32,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='media/product_images')
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE)
+    section = models.ForeignKey(to=ProductSection, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'продукт'

@@ -1,42 +1,42 @@
 [
     {
         "model": "products.productsection",
-        "pk": 0,
+        "pk": 1,
         "fields": {
             "name": "ДЕВОЧКИ"
         }
     },
     {
         "model": "products.productsection",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "name": "МАЛЬЧИКИ"
         }
     },
     {
         "model": "products.productsection",
-        "pk": 2,
+        "pk": 3,
         "fields": {
             "name": "ДЛЯ МАЛЫШЕЙ"
         }
     },
     {
         "model": "products.productsection",
-        "pk": 3,
+        "pk": 4,
         "fields": {
             "name": "ЖЕНЩИНЫ"
         }
     },
     {
         "model": "products.productsection",
-        "pk": 4,
+        "pk": 5,
         "fields": {
             "name": "МУЖЧИНЫ"
         }
     },
     {
         "model": "products.productsection",
-        "pk": 5,
+        "pk": 6,
         "fields": {
             "name": "ДЛЯ ДОМА"
         }

@@ -125,7 +125,7 @@ class Parser:
                                            'price': price_low,
                                            'image': image,
                                            "category": category_pair_id,
-                                           "section": counter
+                                           "section": counter + 1
                                            }
                             }
                         else:
@@ -136,7 +136,7 @@ class Parser:
                                            'price': price.strip('тг').replace(' ', ''),
                                            'image': image,
                                            "category": category_pair_id,
-                                           "section": counter
+                                           "section": counter + 1
                                            }
                             }
                         if good_dict['pk'] not in self.id_set:
@@ -168,14 +168,14 @@ class Parser:
                             "pk": category_pair_id,
                             "fields": {
                                 "name": category_pair[0].strip().upper(),
-                                "section": counter
+                                "section": counter + 1
                             }
                         }
                         self.categories.append(category)
                         self.category_name_set.add(category_name)
                 section = {
                     "model": "products.productsection",
-                    "pk": counter,
+                    "pk": counter + 1,
                     "fields": {
                         "name": self._section_names[counter],
                     }

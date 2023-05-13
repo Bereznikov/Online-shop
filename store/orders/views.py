@@ -52,32 +52,33 @@ class OrderCreateView(TitleMixin, CreateView):
         form.instance.initiator = self.request.user
         return super(OrderCreateView, self).form_valid(form)
 
-    @staticmethod
-    def stripe_webhook_view(request):
-        payload = request.body
-        sig_header = request.META['HTTP_STRIPE_SIGNATURE']
-        event = None
 
-        try:
-            event = stripe.Webhook.construct_event(
-                payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
-            )
-        except ValueError:
-            # Invalid payload
-            return HttpResponse(status=400)
-        except stripe.error.SignatureVerificationError:
-            # Invalid signature
-            return HttpResponse(status=400)
+@csrf_exempt
+def stripe_webhook_view(request):
+    payload = request.body
+    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    event = None
 
-        # Handle the checkout.session.completed event
-        if event['type'] == 'checkout.session.completed':
-            session = event['data']['object']
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
+        )
+    except ValueError:
+        # Invalid payload
+        return HttpResponse(status=400)
+    except stripe.error.SignatureVerificationError:
+        # Invalid signature
+        return HttpResponse(status=400)
 
-            # Fulfill the purchase...
-            fulfill_order(session)
+    # Handle the checkout.session.completed event
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
 
-        # Passed signature verification
-        return HttpResponse(status=200)
+        # Fulfill the purchase...
+        fulfill_order(session)
+
+    # Passed signature verification
+    return HttpResponse(status=200)
 
 
 def fulfill_order(session):

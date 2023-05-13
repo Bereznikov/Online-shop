@@ -33,6 +33,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='media/product_images')
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE)
     section = models.ForeignKey(to=ProductSection, on_delete=models.CASCADE)
+    stripe_product_price_id = models.CharField(max_length=128, null=True, blank=True)
 
     class Meta:
         verbose_name = 'продукт'

@@ -8,8 +8,8 @@ admin.site.register(ProductSection)
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'category')
-    fields = ('name', 'price', 'image', 'category')
+    list_display = ('name', 'price', 'section', 'category', 'stripe_product_price_id')
+    fields = ('name', 'price', 'image', 'section', 'category', 'stripe_product_price_id')
     search_fields = ('id',)
     ordering = ('id',)
 

@@ -1,9 +1,17 @@
 [
     {
         "model": "products.productcategory",
-        "pk": 1,
+        "pk": 0,
         "fields": {
             "name": "КОМБИНЕЗОНЫ И ПИЖАМЫ",
+            "section": 1
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 1,
+        "fields": {
+            "name": "БОДИ И МАЙКИ",
             "section": 1
         }
     },
@@ -11,7 +19,7 @@
         "model": "products.productcategory",
         "pk": 2,
         "fields": {
-            "name": "БОДИ И МАЙКИ",
+            "name": "КУРТКИ И ПАЛЬТО",
             "section": 1
         }
     },
@@ -19,7 +27,7 @@
         "model": "products.productcategory",
         "pk": 3,
         "fields": {
-            "name": "КУРТКИ И ПАЛЬТО",
+            "name": "ПЛАТЬЯ",
             "section": 1
         }
     },
@@ -27,7 +35,7 @@
         "model": "products.productcategory",
         "pk": 4,
         "fields": {
-            "name": "ПЛАТЬЯ",
+            "name": "ДЖИНСЫ",
             "section": 1
         }
     },
@@ -35,7 +43,7 @@
         "model": "products.productcategory",
         "pk": 5,
         "fields": {
-            "name": "ДЖИНСЫ",
+            "name": "КОМБИНЕЗОНЫ И КОСТЮМЫ",
             "section": 1
         }
     },
@@ -43,7 +51,7 @@
         "model": "products.productcategory",
         "pk": 6,
         "fields": {
-            "name": "КОМБИНЕЗОНЫ И КОСТЮМЫ",
+            "name": "ДЖЕМПЕРЫ И ТРИКОТАЖ",
             "section": 1
         }
     },
@@ -51,7 +59,7 @@
         "model": "products.productcategory",
         "pk": 7,
         "fields": {
-            "name": "ДЖЕМПЕРЫ И ТРИКОТАЖ",
+            "name": "ОДЕЖДА ДЛЯ СНА И ПИЖАМЫ",
             "section": 1
         }
     },
@@ -59,7 +67,7 @@
         "model": "products.productcategory",
         "pk": 8,
         "fields": {
-            "name": "ОДЕЖДА ДЛЯ СНА И ПИЖАМЫ",
+            "name": "ОДЕЖДА ДЛЯ ОСОБЫХ СЛУЧАЕВ",
             "section": 1
         }
     },
@@ -67,7 +75,7 @@
         "model": "products.productcategory",
         "pk": 9,
         "fields": {
-            "name": "ОДЕЖДА ДЛЯ ОСОБЫХ СЛУЧАЕВ",
+            "name": "НАБОРЫ И КОМПЛЕКТЫ",
             "section": 1
         }
     },
@@ -75,7 +83,7 @@
         "model": "products.productcategory",
         "pk": 10,
         "fields": {
-            "name": "НАБОРЫ И КОМПЛЕКТЫ",
+            "name": "РУБАШКИ И БЛУЗКИ",
             "section": 1
         }
     },
@@ -83,7 +91,7 @@
         "model": "products.productcategory",
         "pk": 11,
         "fields": {
-            "name": "РУБАШКИ И БЛУЗКИ",
+            "name": "ШОРТЫ И ЮБКИ",
             "section": 1
         }
     },
@@ -91,7 +99,7 @@
         "model": "products.productcategory",
         "pk": 12,
         "fields": {
-            "name": "ШОРТЫ И ЮБКИ",
+            "name": "НОСКИ И КОЛГОТКИ",
             "section": 1
         }
     },
@@ -99,7 +107,7 @@
         "model": "products.productcategory",
         "pk": 13,
         "fields": {
-            "name": "НОСКИ И КОЛГОТКИ",
+            "name": "СПОРТИВНАЯ ОДЕЖДА",
             "section": 1
         }
     },
@@ -107,7 +115,7 @@
         "model": "products.productcategory",
         "pk": 14,
         "fields": {
-            "name": "СПОРТИВНАЯ ОДЕЖДА",
+            "name": "ХУДИ И СВИТШОТЫ",
             "section": 1
         }
     },
@@ -115,7 +123,7 @@
         "model": "products.productcategory",
         "pk": 15,
         "fields": {
-            "name": "ХУДИ И СВИТШОТЫ",
+            "name": "КУПАЛЬНИКИ И ПЛЯЖНАЯ ОДЕЖДА",
             "section": 1
         }
     },
@@ -123,7 +131,7 @@
         "model": "products.productcategory",
         "pk": 16,
         "fields": {
-            "name": "КУПАЛЬНИКИ И ПЛЯЖНАЯ ОДЕЖДА",
+            "name": "ФУТБОЛКИ",
             "section": 1
         }
     },
@@ -131,7 +139,7 @@
         "model": "products.productcategory",
         "pk": 17,
         "fields": {
-            "name": "ФУТБОЛКИ",
+            "name": "ТОПЫ",
             "section": 1
         }
     },
@@ -139,7 +147,7 @@
         "model": "products.productcategory",
         "pk": 18,
         "fields": {
-            "name": "ТОПЫ",
+            "name": "БРЮКИ И ЛЕГГИНСЫ",
             "section": 1
         }
     },
@@ -147,7 +155,7 @@
         "model": "products.productcategory",
         "pk": 19,
         "fields": {
-            "name": "БРЮКИ И ЛЕГГИНСЫ",
+            "name": "НИЖНЕЕ БЕЛЬЕ",
             "section": 1
         }
     },
@@ -155,7 +163,7 @@
         "model": "products.productcategory",
         "pk": 20,
         "fields": {
-            "name": "НИЖНЕЕ БЕЛЬЕ",
+            "name": "СУМКИ",
             "section": 1
         }
     },
@@ -163,7 +171,7 @@
         "model": "products.productcategory",
         "pk": 21,
         "fields": {
-            "name": "СУМКИ",
+            "name": "ШАПКИ, ПЕРЧАТКИ И ШАРФЫ",
             "section": 1
         }
     },
@@ -171,7 +179,7 @@
         "model": "products.productcategory",
         "pk": 22,
         "fields": {
-            "name": "ШАПКИ, ПЕРЧАТКИ И ШАРФЫ",
+            "name": "СУМКИ ДЛЯ ЗАВТРАКА И БУТЫЛКИ ДЛЯ НАПИТКОВ",
             "section": 1
         }
     },
@@ -179,7 +187,7 @@
         "model": "products.productcategory",
         "pk": 23,
         "fields": {
-            "name": "СУМКИ ДЛЯ ЗАВТРАКА И БУТЫЛКИ ДЛЯ НАПИТКОВ",
+            "name": "КАНЦЕЛЯРСКИЕ ПРИНАДЛЕЖНОСТИ",
             "section": 1
         }
     },
@@ -187,7 +195,7 @@
         "model": "products.productcategory",
         "pk": 24,
         "fields": {
-            "name": "КАНЦЕЛЯРСКИЕ ПРИНАДЛЕЖНОСТИ",
+            "name": "САПОГИ И БОТИНКИ",
             "section": 1
         }
     },
@@ -195,7 +203,7 @@
         "model": "products.productcategory",
         "pk": 25,
         "fields": {
-            "name": "САПОГИ И БОТИНКИ",
+            "name": "ПИНЕТКИ",
             "section": 1
         }
     },
@@ -203,7 +211,7 @@
         "model": "products.productcategory",
         "pk": 26,
         "fields": {
-            "name": "ПИНЕТКИ",
+            "name": "ПЕРВАЯ ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 1
         }
     },
@@ -211,7 +219,7 @@
         "model": "products.productcategory",
         "pk": 27,
         "fields": {
-            "name": "ПЕРВАЯ ОБУВЬ ДЛЯ МАЛЫШЕЙ",
+            "name": "ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 1
         }
     },
@@ -219,7 +227,7 @@
         "model": "products.productcategory",
         "pk": 28,
         "fields": {
-            "name": "ОБУВЬ ДЛЯ МАЛЫШЕЙ",
+            "name": "СПОРТИВНАЯ ОБУВЬ",
             "section": 1
         }
     },
@@ -227,7 +235,7 @@
         "model": "products.productcategory",
         "pk": 29,
         "fields": {
-            "name": "СПОРТИВНАЯ ОБУВЬ",
+            "name": "РЕЗИНОВЫЕ САПОГИ",
             "section": 1
         }
     },
@@ -235,21 +243,13 @@
         "model": "products.productcategory",
         "pk": 30,
         "fields": {
-            "name": "РЕЗИНОВЫЕ САПОГИ",
-            "section": 1
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 31,
-        "fields": {
             "name": "КОМБИНЕЗОНЫ И ПИЖАМЫ",
             "section": 2
         }
     },
     {
         "model": "products.productcategory",
-        "pk": 32,
+        "pk": 31,
         "fields": {
             "name": "БОДИ И МАЙКИ",
             "section": 2
@@ -257,9 +257,17 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 33,
+        "pk": 32,
         "fields": {
             "name": "КУРТКИ И ПАЛЬТО",
+            "section": 2
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 33,
+        "fields": {
+            "name": "ДЖИНСЫ",
             "section": 2
         }
     },
@@ -267,7 +275,7 @@
         "model": "products.productcategory",
         "pk": 34,
         "fields": {
-            "name": "ДЖИНСЫ",
+            "name": "СПОРТИВНЫЕ ШТАНЫ",
             "section": 2
         }
     },
@@ -275,7 +283,7 @@
         "model": "products.productcategory",
         "pk": 35,
         "fields": {
-            "name": "СПОРТИВНЫЕ ШТАНЫ",
+            "name": "ДЖЕМПЕРЫ И ТРИКОТАЖ",
             "section": 2
         }
     },
@@ -283,7 +291,7 @@
         "model": "products.productcategory",
         "pk": 36,
         "fields": {
-            "name": "ДЖЕМПЕРЫ И ТРИКОТАЖ",
+            "name": "ОДЕЖДА ДЛЯ СНА И ПИЖАМЫ",
             "section": 2
         }
     },
@@ -291,7 +299,7 @@
         "model": "products.productcategory",
         "pk": 37,
         "fields": {
-            "name": "ОДЕЖДА ДЛЯ СНА И ПИЖАМЫ",
+            "name": "ОДЕЖДА ДЛЯ ОСОБЫХ СЛУЧАЕВ",
             "section": 2
         }
     },
@@ -299,7 +307,7 @@
         "model": "products.productcategory",
         "pk": 38,
         "fields": {
-            "name": "ОДЕЖДА ДЛЯ ОСОБЫХ СЛУЧАЕВ",
+            "name": "НАБОРЫ И КОМПЛЕКТЫ",
             "section": 2
         }
     },
@@ -307,7 +315,7 @@
         "model": "products.productcategory",
         "pk": 39,
         "fields": {
-            "name": "НАБОРЫ И КОМПЛЕКТЫ",
+            "name": "РУБАШКИ",
             "section": 2
         }
     },
@@ -315,7 +323,7 @@
         "model": "products.productcategory",
         "pk": 40,
         "fields": {
-            "name": "РУБАШКИ",
+            "name": "ШОРТЫ",
             "section": 2
         }
     },
@@ -323,7 +331,7 @@
         "model": "products.productcategory",
         "pk": 41,
         "fields": {
-            "name": "ШОРТЫ",
+            "name": "НОСКИ",
             "section": 2
         }
     },
@@ -331,7 +339,7 @@
         "model": "products.productcategory",
         "pk": 42,
         "fields": {
-            "name": "НОСКИ",
+            "name": "СПОРТИВНАЯ ОДЕЖДА",
             "section": 2
         }
     },
@@ -339,7 +347,7 @@
         "model": "products.productcategory",
         "pk": 43,
         "fields": {
-            "name": "СПОРТИВНАЯ ОДЕЖДА",
+            "name": "КОСТЮМЫ И ЖИЛЕТЫ",
             "section": 2
         }
     },
@@ -347,7 +355,7 @@
         "model": "products.productcategory",
         "pk": 44,
         "fields": {
-            "name": "КОСТЮМЫ И ЖИЛЕТЫ",
+            "name": "ХУДИ И СВИТШОТЫ",
             "section": 2
         }
     },
@@ -355,7 +363,7 @@
         "model": "products.productcategory",
         "pk": 45,
         "fields": {
-            "name": "ХУДИ И СВИТШОТЫ",
+            "name": "КУПАЛЬНИКИ И ПЛЯЖНАЯ ОДЕЖДА",
             "section": 2
         }
     },
@@ -363,7 +371,7 @@
         "model": "products.productcategory",
         "pk": 46,
         "fields": {
-            "name": "КУПАЛЬНИКИ И ПЛЯЖНАЯ ОДЕЖДА",
+            "name": "ФУТБОЛКИ",
             "section": 2
         }
     },
@@ -371,7 +379,7 @@
         "model": "products.productcategory",
         "pk": 47,
         "fields": {
-            "name": "ФУТБОЛКИ",
+            "name": "ТОПЫ",
             "section": 2
         }
     },
@@ -379,7 +387,7 @@
         "model": "products.productcategory",
         "pk": 48,
         "fields": {
-            "name": "ТОПЫ",
+            "name": "СПОРТИВНЫЙ КОСТЮМ",
             "section": 2
         }
     },
@@ -387,7 +395,7 @@
         "model": "products.productcategory",
         "pk": 49,
         "fields": {
-            "name": "СПОРТИВНЫЙ КОСТЮМ",
+            "name": "БРЮКИ И ЧИНОСЫ",
             "section": 2
         }
     },
@@ -395,7 +403,7 @@
         "model": "products.productcategory",
         "pk": 50,
         "fields": {
-            "name": "БРЮКИ И ЧИНОСЫ",
+            "name": "НИЖНЕЕ БЕЛЬЕ",
             "section": 2
         }
     },
@@ -403,7 +411,7 @@
         "model": "products.productcategory",
         "pk": 51,
         "fields": {
-            "name": "НИЖНЕЕ БЕЛЬЕ",
+            "name": "САПОГИ И БОТИНКИ",
             "section": 2
         }
     },
@@ -411,7 +419,7 @@
         "model": "products.productcategory",
         "pk": 52,
         "fields": {
-            "name": "САПОГИ И БОТИНКИ",
+            "name": "ПИНЕТКИ",
             "section": 2
         }
     },
@@ -419,7 +427,7 @@
         "model": "products.productcategory",
         "pk": 53,
         "fields": {
-            "name": "ПИНЕТКИ",
+            "name": "ПЕРВАЯ ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 2
         }
     },
@@ -427,7 +435,7 @@
         "model": "products.productcategory",
         "pk": 54,
         "fields": {
-            "name": "ПЕРВАЯ ОБУВЬ ДЛЯ МАЛЫШЕЙ",
+            "name": "ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 2
         }
     },
@@ -435,7 +443,7 @@
         "model": "products.productcategory",
         "pk": 55,
         "fields": {
-            "name": "ОБУВЬ ДЛЯ МАЛЫШЕЙ",
+            "name": "СПОРТИВНАЯ ОБУВЬ",
             "section": 2
         }
     },
@@ -443,7 +451,7 @@
         "model": "products.productcategory",
         "pk": 56,
         "fields": {
-            "name": "СПОРТИВНАЯ ОБУВЬ",
+            "name": "РЕЗИНОВЫЕ САПОГИ",
             "section": 2
         }
     },
@@ -451,7 +459,7 @@
         "model": "products.productcategory",
         "pk": 57,
         "fields": {
-            "name": "РЕЗИНОВЫЕ САПОГИ",
+            "name": "СУМКИ",
             "section": 2
         }
     },
@@ -459,7 +467,7 @@
         "model": "products.productcategory",
         "pk": 58,
         "fields": {
-            "name": "СУМКИ",
+            "name": "ШАПКИ, ПЕРЧАТКИ И ШАРФЫ",
             "section": 2
         }
     },
@@ -467,7 +475,7 @@
         "model": "products.productcategory",
         "pk": 59,
         "fields": {
-            "name": "ШАПКИ, ПЕРЧАТКИ И ШАРФЫ",
+            "name": "КОНТЕЙНЕРЫ ДЛЯ ЕДЫ И БУТЫЛКИ ДЛЯ НАПИТКОВ",
             "section": 2
         }
     },
@@ -475,7 +483,7 @@
         "model": "products.productcategory",
         "pk": 60,
         "fields": {
-            "name": "КОНТЕЙНЕРЫ ДЛЯ ЕДЫ И БУТЫЛКИ ДЛЯ НАПИТКОВ",
+            "name": "КАНЦЕЛЯРСКИЕ ПРИНАДЛЕЖНОСТИ",
             "section": 2
         }
     },
@@ -483,7 +491,7 @@
         "model": "products.productcategory",
         "pk": 61,
         "fields": {
-            "name": "КАНЦЕЛЯРСКИЕ ПРИНАДЛЕЖНОСТИ",
+            "name": "ГАЛСТУКИ",
             "section": 2
         }
     },
@@ -491,21 +499,13 @@
         "model": "products.productcategory",
         "pk": 62,
         "fields": {
-            "name": "ГАЛСТУКИ",
-            "section": 2
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 63,
-        "fields": {
             "name": "СУМКИ",
             "section": 3
         }
     },
     {
         "model": "products.productcategory",
-        "pk": 64,
+        "pk": 63,
         "fields": {
             "name": "СЛЮНЯВЧИКИ",
             "section": 3
@@ -513,7 +513,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 65,
+        "pk": 64,
         "fields": {
             "name": "ОДЕЯЛА",
             "section": 3
@@ -521,7 +521,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 66,
+        "pk": 65,
         "fields": {
             "name": "ШАПКИ И ВАРЕЖКИ-ЦАРАПКИ",
             "section": 3
@@ -529,7 +529,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 67,
+        "pk": 66,
         "fields": {
             "name": "ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 3
@@ -537,7 +537,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 68,
+        "pk": 67,
         "fields": {
             "name": "ПЕРВАЯ ОБУВЬ ДЛЯ МАЛЫШЕЙ",
             "section": 3
@@ -545,7 +545,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 69,
+        "pk": 68,
         "fields": {
             "name": "БЛЕЙЗЕРЫ",
             "section": 4
@@ -553,7 +553,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 70,
+        "pk": 69,
         "fields": {
             "name": "РУБАШКИ И БЛУЗКИ",
             "section": 4
@@ -561,7 +561,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 71,
+        "pk": 70,
         "fields": {
             "name": "КУРТКИ И ПАЛЬТО",
             "section": 4
@@ -569,7 +569,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 72,
+        "pk": 71,
         "fields": {
             "name": "ПЛАТЬЯ",
             "section": 4
@@ -577,7 +577,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 73,
+        "pk": 72,
         "fields": {
             "name": "ХУДИ И СПОРТИВНЫЕ ТОПЫ",
             "section": 4
@@ -585,9 +585,17 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 74,
+        "pk": 73,
         "fields": {
             "name": "ДЖИНСЫ",
+            "section": 4
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 74,
+        "fields": {
+            "name": "ДЖЕМПЕРЫ И КАРДИГАНЫ",
             "section": 4
         }
     },
@@ -595,7 +603,7 @@
         "model": "products.productcategory",
         "pk": 75,
         "fields": {
-            "name": "ДЖЕМПЕРЫ И КАРДИГАНЫ",
+            "name": "КОМБИНЕЗОНЫ И КОСТЮМЫ",
             "section": 4
         }
     },
@@ -603,7 +611,7 @@
         "model": "products.productcategory",
         "pk": 76,
         "fields": {
-            "name": "КОМБИНЕЗОНЫ И КОСТЮМЫ",
+            "name": "ЛЕГГИНСЫ И СПОРТИВНЫЕ БРЮКИ",
             "section": 4
         }
     },
@@ -611,7 +619,7 @@
         "model": "products.productcategory",
         "pk": 77,
         "fields": {
-            "name": "ЛЕГГИНСЫ И СПОРТИВНЫЕ БРЮКИ",
+            "name": "ЮБКИ",
             "section": 4
         }
     },
@@ -619,7 +627,7 @@
         "model": "products.productcategory",
         "pk": 78,
         "fields": {
-            "name": "ЮБКИ",
+            "name": "СПОРТИВНАЯ ОДЕЖДА",
             "section": 4
         }
     },
@@ -627,7 +635,7 @@
         "model": "products.productcategory",
         "pk": 79,
         "fields": {
-            "name": "СПОРТИВНАЯ ОДЕЖДА",
+            "name": "КОСТЮМЫ И ДЕЛОВОЙ ГАРДЕРОБ",
             "section": 4
         }
     },
@@ -635,7 +643,7 @@
         "model": "products.productcategory",
         "pk": 80,
         "fields": {
-            "name": "КОСТЮМЫ И ДЕЛОВОЙ ГАРДЕРОБ",
+            "name": "ПЛЯЖНАЯ КОЛЛЕКЦИЯ",
             "section": 4
         }
     },
@@ -643,7 +651,7 @@
         "model": "products.productcategory",
         "pk": 81,
         "fields": {
-            "name": "ПЛЯЖНАЯ КОЛЛЕКЦИЯ",
+            "name": "ФУТБОЛКИ И ТОПЫ",
             "section": 4
         }
     },
@@ -651,7 +659,7 @@
         "model": "products.productcategory",
         "pk": 82,
         "fields": {
-            "name": "ФУТБОЛКИ И ТОПЫ",
+            "name": "БРЮКИ",
             "section": 4
         }
     },
@@ -659,7 +667,7 @@
         "model": "products.productcategory",
         "pk": 83,
         "fields": {
-            "name": "БРЮКИ",
+            "name": "ВСЕ ДАМСКОЕ БЕЛЬЕ & НИЖНЕЕ БЕЛЬЕ",
             "section": 4
         }
     },
@@ -667,7 +675,7 @@
         "model": "products.productcategory",
         "pk": 84,
         "fields": {
-            "name": "ВСЕ ДАМСКОЕ БЕЛЬЕ & НИЖНЕЕ БЕЛЬЕ",
+            "name": "САПОГИ И БОТИНКИ",
             "section": 4
         }
     },
@@ -675,7 +683,7 @@
         "model": "products.productcategory",
         "pk": 85,
         "fields": {
-            "name": "САПОГИ И БОТИНКИ",
+            "name": "ТУФЛИ НА ПЛОСКОЙ ПОДОШВЕ",
             "section": 4
         }
     },
@@ -683,7 +691,7 @@
         "model": "products.productcategory",
         "pk": 86,
         "fields": {
-            "name": "ТУФЛИ НА ПЛОСКОЙ ПОДОШВЕ",
+            "name": "ТУФЛИ НА КАБЛУКЕ",
             "section": 4
         }
     },
@@ -691,7 +699,7 @@
         "model": "products.productcategory",
         "pk": 87,
         "fields": {
-            "name": "ТУФЛИ НА КАБЛУКЕ",
+            "name": "САНДАЛИИ",
             "section": 4
         }
     },
@@ -699,7 +707,7 @@
         "model": "products.productcategory",
         "pk": 88,
         "fields": {
-            "name": "САНДАЛИИ",
+            "name": "КРОССОВКИ",
             "section": 4
         }
     },
@@ -707,7 +715,7 @@
         "model": "products.productcategory",
         "pk": 89,
         "fields": {
-            "name": "КРОССОВКИ",
+            "name": "СУМКИ, КОШЕЛЬКИ ЧЕМОДАНЫ",
             "section": 4
         }
     },
@@ -715,7 +723,7 @@
         "model": "products.productcategory",
         "pk": 90,
         "fields": {
-            "name": "СУМКИ, КОШЕЛЬКИ ЧЕМОДАНЫ",
+            "name": "ШАПКИ, ШАРФЫ И НАКИДКИ",
             "section": 4
         }
     },
@@ -723,7 +731,7 @@
         "model": "products.productcategory",
         "pk": 91,
         "fields": {
-            "name": "ШАПКИ, ПЕРЧАТКИ И ШАРФЫ",
+            "name": "БИЖУТЕРИЯ И ЧАСЫ",
             "section": 4
         }
     },
@@ -731,7 +739,7 @@
         "model": "products.productcategory",
         "pk": 92,
         "fields": {
-            "name": "БИЖУТЕРИЯ И ЧАСЫ",
+            "name": "НОСКИ И КОЛГОТКИ",
             "section": 4
         }
     },
@@ -739,7 +747,7 @@
         "model": "products.productcategory",
         "pk": 93,
         "fields": {
-            "name": "НОСКИ И КОЛГОТКИ",
+            "name": "СОЛНЦЕЗАЩИТНЫЕ ОЧКИ",
             "section": 4
         }
     },
@@ -747,21 +755,13 @@
         "model": "products.productcategory",
         "pk": 94,
         "fields": {
-            "name": "СОЛНЦЕЗАЩИТНЫЕ ОЧКИ",
-            "section": 4
-        }
-    },
-    {
-        "model": "products.productcategory",
-        "pk": 95,
-        "fields": {
             "name": "КУРТКИ И ПАЛЬТО",
             "section": 5
         }
     },
     {
         "model": "products.productcategory",
-        "pk": 96,
+        "pk": 95,
         "fields": {
             "name": "ДЖИНСЫ",
             "section": 5
@@ -769,7 +769,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 97,
+        "pk": 96,
         "fields": {
             "name": "СПОРТИВНЫЕ ШТАНЫ",
             "section": 5
@@ -777,7 +777,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 98,
+        "pk": 97,
         "fields": {
             "name": "ДЖЕМПЕРЫ И КАРДИГАНЫ",
             "section": 5
@@ -785,7 +785,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 99,
+        "pk": 98,
         "fields": {
             "name": "ДОМАШНЯЯ ОДЕЖДА",
             "section": 5
@@ -793,7 +793,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 100,
+        "pk": 99,
         "fields": {
             "name": "ПИЖАМЫ И ОДЕЖДА ДЛЯ СНА",
             "section": 5
@@ -801,7 +801,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 101,
+        "pk": 100,
         "fields": {
             "name": "РУБАШКИ",
             "section": 5
@@ -809,7 +809,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 102,
+        "pk": 101,
         "fields": {
             "name": "ШОРТЫ И ПЛЯЖНАЯ ОДЕЖДА",
             "section": 5
@@ -817,7 +817,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 103,
+        "pk": 102,
         "fields": {
             "name": "НОСКИ",
             "section": 5
@@ -825,7 +825,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 104,
+        "pk": 103,
         "fields": {
             "name": "СПОРТИВНАЯ ОДЕЖДА",
             "section": 5
@@ -833,7 +833,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 105,
+        "pk": 104,
         "fields": {
             "name": "КОСТЮМЫ",
             "section": 5
@@ -841,7 +841,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 106,
+        "pk": 105,
         "fields": {
             "name": "ХУДИ И СВИТШОТЫ",
             "section": 5
@@ -849,7 +849,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 107,
+        "pk": 106,
         "fields": {
             "name": "БРЮКИ И ЧИНОСЫ",
             "section": 5
@@ -857,7 +857,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 108,
+        "pk": 107,
         "fields": {
             "name": "ФУТБОЛКИ И ПОЛО",
             "section": 5
@@ -865,7 +865,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 109,
+        "pk": 108,
         "fields": {
             "name": "НИЖНЕЕ БЕЛЬЕ",
             "section": 5
@@ -873,7 +873,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 110,
+        "pk": 109,
         "fields": {
             "name": "САПОГИ И БОТИНКИ",
             "section": 5
@@ -881,7 +881,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 111,
+        "pk": 110,
         "fields": {
             "name": "ОБУВЬ",
             "section": 5
@@ -889,7 +889,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 112,
+        "pk": 111,
         "fields": {
             "name": "САНДАЛИИ И ШЛЕПАНЦЫ",
             "section": 5
@@ -897,7 +897,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 113,
+        "pk": 112,
         "fields": {
             "name": "КРОССОВКИ",
             "section": 5
@@ -905,7 +905,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 114,
+        "pk": 113,
         "fields": {
             "name": "БЛЕЙЗЕРЫ И ДЕЛОВЫЕ ПИДЖАКИ",
             "section": 5
@@ -913,7 +913,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 115,
+        "pk": 114,
         "fields": {
             "name": "ДЕЛОВЫЕ РУБАШКИ",
             "section": 5
@@ -921,7 +921,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 116,
+        "pk": 115,
         "fields": {
             "name": "СТРОГИЕ БРЮКИ",
             "section": 5
@@ -929,7 +929,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 118,
+        "pk": 117,
         "fields": {
             "name": "ЛЬНЯНЫЕ КОСТЮМЫ",
             "section": 5
@@ -937,7 +937,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 119,
+        "pk": 118,
         "fields": {
             "name": "ЗАПОНКИ И ЗАЖИМЫ ДЛЯ ГАЛСТУКА",
             "section": 5
@@ -945,7 +945,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 120,
+        "pk": 119,
         "fields": {
             "name": "ГАЛСТУКИ И ПЛАТКИ",
             "section": 5
@@ -953,7 +953,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 121,
+        "pk": 120,
         "fields": {
             "name": "ЖИЛЕТЫ",
             "section": 5
@@ -961,7 +961,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 122,
+        "pk": 121,
         "fields": {
             "name": "СУМКИ",
             "section": 5
@@ -969,7 +969,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 123,
+        "pk": 122,
         "fields": {
             "name": "РЕМНИ И ПОДТЯЖКИ",
             "section": 5
@@ -977,7 +977,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 124,
+        "pk": 123,
         "fields": {
             "name": "ШАПКИ",
             "section": 5
@@ -985,7 +985,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 125,
+        "pk": 124,
         "fields": {
             "name": "ЧЕМОДАНЫ И ДОРОЖНЫЕ АКСЕССУАРЫ",
             "section": 5
@@ -993,7 +993,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 126,
+        "pk": 125,
         "fields": {
             "name": "СОЛНЦЕЗАЩИТНЫЕ ОЧКИ",
             "section": 5
@@ -1001,7 +1001,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 127,
+        "pk": 126,
         "fields": {
             "name": "КОШЕЛЬКИ",
             "section": 5
@@ -1009,7 +1009,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 128,
+        "pk": 127,
         "fields": {
             "name": "ГОСТИНАЯ",
             "section": 6
@@ -1017,7 +1017,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 129,
+        "pk": 128,
         "fields": {
             "name": "СТОЛОВАЯ",
             "section": 6
@@ -1025,7 +1025,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 130,
+        "pk": 129,
         "fields": {
             "name": "СПАЛЬНЯ",
             "section": 6
@@ -1033,7 +1033,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 131,
+        "pk": 130,
         "fields": {
             "name": "ДЕТСКАЯ",
             "section": 6
@@ -1041,7 +1041,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 132,
+        "pk": 131,
         "fields": {
             "name": "ДЕТСКАЯ КОМНАТА",
             "section": 6
@@ -1049,7 +1049,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 133,
+        "pk": 132,
         "fields": {
             "name": "GARDEN",
             "section": 6
@@ -1057,7 +1057,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 134,
+        "pk": 133,
         "fields": {
             "name": "КУХНЯ",
             "section": 6
@@ -1065,7 +1065,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 135,
+        "pk": 134,
         "fields": {
             "name": "ДЛЯ ВАННОЙ",
             "section": 6
@@ -1073,7 +1073,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 136,
+        "pk": 135,
         "fields": {
             "name": "ДОМАШНИЙ ОФИС",
             "section": 6
@@ -1081,7 +1081,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 137,
+        "pk": 136,
         "fields": {
             "name": "ПРИХОЖАЯ",
             "section": 6
@@ -1089,7 +1089,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 138,
+        "pk": 137,
         "fields": {
             "name": "АКСЕССУАРЫ ДЛЯ САДА",
             "section": 6
@@ -1097,7 +1097,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 139,
+        "pk": 138,
         "fields": {
             "name": "ПОДОДЕЯЛЬНИКИ И КОМПЛЕКТЫ",
             "section": 6
@@ -1105,7 +1105,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 140,
+        "pk": 139,
         "fields": {
             "name": "ПРОСТЫНИ И НАВОЛОЧКИ",
             "section": 6
@@ -1113,7 +1113,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 141,
+        "pk": 140,
         "fields": {
             "name": "ОДЕЯЛА И ПОДУШКИ",
             "section": 6
@@ -1121,7 +1121,7 @@
     },
     {
         "model": "products.productcategory",
-        "pk": 142,
+        "pk": 141,
         "fields": {
             "name": "МАТРАСЫ И НАМАТРАСНИКИ",
             "section": 6

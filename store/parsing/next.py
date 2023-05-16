@@ -33,7 +33,7 @@ class Parser:
         for section in sections:
             res.append(section)
         del res[5]  # отсеиваем секции сайта состоящие из повторений продуктов
-        res = res[:-3]  # отсеиваем секции сайта состоящие из повторений продуктов
+        res = res[:-4]  # отсеиваем секции сайта состоящие из повторений продуктов
         return res
 
     @staticmethod
@@ -158,7 +158,6 @@ class Parser:
             for section_link in self._section_links:
                 category_names_links = self.get_url_categories(section_link)
                 for category_pair in category_names_links:
-                    category_pair_id += 1
                     category_name = category_pair[0].strip().upper() + self._section_names[counter]
                     if category_name not in self.category_name_set:
                         task = asyncio.create_task(self.get_data(session, category_pair, counter, category_pair_id))
@@ -173,6 +172,7 @@ class Parser:
                         }
                         self.categories.append(category)
                         self.category_name_set.add(category_name)
+                    category_pair_id += 1
                 section = {
                     "model": "products.productsection",
                     "pk": counter + 1,

@@ -8,6 +8,7 @@ from django.http import HttpResponse
 
 from common.views import TitleMixin
 from orders.forms import OrderForm
+from products.models import Basket
 
 from http import HTTPStatus
 
@@ -33,14 +34,17 @@ class OrderCreateView(TitleMixin, CreateView):
 
     def post(self, request, *args, **kwargs):
         super(OrderCreateView, self).post(request, *args, **kwargs)
+        baskets = Basket.filter(user=self.request.user)
+        line_items = []
+        for basket in baskets:
+            item = {
+                'price': basket.product.stripe_product_price_id,
+                'quantity': basket.quantity,
+            }
+            line_items.append(item)
+
         checkout_session = stripe.checkout.Session.create(
-            line_items=[
-                {
-                    # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    'price': '{{PRICE_ID}}',
-                    'quantity': 1,
-                },
-            ],
+            line_items=line_items,
             metadata={'order_id': self.object.id},
             mode='payment',
             success_url='{}{}'.format(settings.DOMAIN_NAME, reverse('orders:order_success')),

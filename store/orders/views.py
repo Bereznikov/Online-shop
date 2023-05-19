@@ -34,7 +34,7 @@ class OrderCreateView(TitleMixin, CreateView):
 
     def post(self, request, *args, **kwargs):
         super(OrderCreateView, self).post(request, *args, **kwargs)
-        baskets = Basket.filter(user=self.request.user)
+        baskets = Basket.objects.filter(user=self.request.user)
         line_items = []
         for basket in baskets:
             item = {

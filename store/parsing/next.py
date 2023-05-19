@@ -114,7 +114,7 @@ class Parser:
                         good_id = name_id.rstrip(')').lstrip(' (')[-6:]
                         previous_sib = item.previous_sibling
                         image = previous_sib.find('img')['src']
-                        if 'V&A' in name_id:
+                        if 'V&A' in name_id or '<a href=' in good_name:
                             continue
                         if '-' in price or '&' in good_id:
                             price_low = price.split(' - ')[0].strip(' тг').replace(' ', '')

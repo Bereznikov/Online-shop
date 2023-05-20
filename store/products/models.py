@@ -1,9 +1,8 @@
-from django.db import models
+import stripe
 from django.conf import settings
+from django.db import models
 
 from users.models import User
-
-import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -84,4 +83,3 @@ class Basket(models.Model):
             'sum': float(self.sum())
         }
         return basket_item
-

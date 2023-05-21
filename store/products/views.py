@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import HttpResponseRedirect
 from django.views.generic.base import TemplateView
+from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
 from common.views import TitleMixin
@@ -34,6 +35,16 @@ class ProductsListView(TitleMixin, ListView):
         context = super(ProductsListView, self).get_context_data()
         context['categories'] = ProductCategory.objects.filter(section_id=section_id)
         context['sections'] = ProductSection.objects.all()
+        return context
+
+
+class ProductDetailView(DetailView):
+    template_name = 'products/product.html'
+    model = Product
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        context['title'] = f'Store - №{self.object.id}'
         return context
 
 

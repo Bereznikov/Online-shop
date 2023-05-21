@@ -1,0 +1,33 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link href="{% static 'vendor/css/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <h1 class="product-id">{{ object.id }}</h1>
+        <div class="card h-1000">
+            <a href="#">
+                <img class="card-img-top"
+                     src="{{ object.image }}"
+                     alt="">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a>{{ object.name }}</a>
+                </h4>
+                <h5>{{ object.price }}</h5>
+                <p class="card-text">{{ object.description }}</p>
+            </div>
+            <div class="card-footer text-center">
+                <a class="btn btn-outline-success" href="{% url 'products:basket_add' product.id %}">
+                    Отправить в корзину
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

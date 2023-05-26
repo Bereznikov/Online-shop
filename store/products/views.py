@@ -31,10 +31,15 @@ class ProductsListView(TitleMixin, ListView):
             return queryset.order_by('section_id')
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        section_id = self.kwargs.get('section_id')
+        category_id = self.kwargs.get('category_id')
+        if category_id:
+            section_id = ProductCategory.objects.get(category_id=category_id).section
+        else:
+            section_id = self.kwargs.get('section_id')
         context = super(ProductsListView, self).get_context_data()
         context['categories'] = ProductCategory.objects.filter(section_id=section_id)
         context['sections'] = ProductSection.objects.all()
+        context['chosen_section'] = section_id
         return context
 
 

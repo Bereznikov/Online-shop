@@ -124,7 +124,7 @@ class Parser:
                                 'fields': {'name': good_name,
                                            'price': price_low,
                                            'image': image,
-                                           "category": category_pair_id,
+                                           "category": category_pair_id + 1,
                                            "section": counter + 1
                                            }
                             }
@@ -135,7 +135,7 @@ class Parser:
                                 'fields': {'name': good_name,
                                            'price': price.strip('тг').replace(' ', ''),
                                            'image': image,
-                                           "category": category_pair_id,
+                                           "category": category_pair_id + 1,
                                            "section": counter + 1
                                            }
                             }
@@ -164,7 +164,7 @@ class Parser:
                         tasks.append(task)
                         category = {
                             "model": "products.productcategory",
-                            "pk": category_pair_id,
+                            "pk": category_pair_id + 1,
                             "fields": {
                                 "name": category_pair[0].strip().upper(),
                                 "section": counter + 1

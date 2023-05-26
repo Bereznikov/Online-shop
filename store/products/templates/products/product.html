@@ -1,9 +1,11 @@
 {% extends 'products/base.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block css %}
     <link href="{% static 'vendor/css/index.css' %}" rel="stylesheet">
 {% endblock %}
+
 
 {% block content %}
 <div class="container">
@@ -19,7 +21,7 @@
                 <h4 class="card-title">
                     <a>{{ object.name }}</a>
                 </h4>
-                <h5>{{ object.price }}</h5>
+                <h5>{{ object.price|intcomma }} KZT</h5>
                 <p class="card-text">{{ object.description }}</p>
             </div>
             <div class="card-footer text-center">

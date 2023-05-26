@@ -24,9 +24,9 @@ class ProductsListView(TitleMixin, ListView):
         section_id = self.kwargs.get('section_id')
         category_id = self.kwargs.get('category_id')
         if category_id is not None:
-            return queryset.filter(category_id=category_id)
+            return queryset.filter(category_id=category_id).order_by('id')
         elif section_id:
-            return queryset.filter(section_id=section_id)
+            return queryset.filter(section_id=section_id).order_by('id')
         else:
             return queryset.order_by('section_id')
 

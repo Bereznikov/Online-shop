@@ -23,7 +23,7 @@ class ProductsListView(TitleMixin, ListView):
         queryset = super(ProductsListView, self).get_queryset()
         section_id = self.kwargs.get('section_id')
         category_id = self.kwargs.get('category_id')
-        if category_id:
+        if category_id is not None:
             return queryset.filter(category_id=category_id)
         elif section_id:
             return queryset.filter(section_id=section_id)
@@ -32,7 +32,7 @@ class ProductsListView(TitleMixin, ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         category_id = self.kwargs.get('category_id')
-        if category_id:
+        if category_id is not None:
             section_id = ProductCategory.objects.get(id=category_id).section_id
         else:
             section_id = self.kwargs.get('section_id')

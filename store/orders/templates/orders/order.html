@@ -1,4 +1,5 @@
 {% extends 'products/base.html' %}
+{% load humanize %}
 
 {% block content %}
     <section>
@@ -22,13 +23,13 @@
                                 {{ purchased_item.product_name }}
                             </th>
                             <td>{{ purchased_item.quantity }}</td>
-                            <td>{{ purchased_item.price }} руб.</td>
-                            <td>{{ purchased_item.sum }} руб.</td>
+                            <td>{{ purchased_item.price|intcomma }} KZT</td>
+                            <td>{{ purchased_item.sum|intcomma }} KZT</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                <p class="float-right h4 mt-3">{{ object.basket_history.total_sum }} руб.</p>
+                <p class="float-right h4 mt-3">{{ object.basket_history.total_sum|intcomma }} KZT</p>
             </div>
         </div>
     </div>
